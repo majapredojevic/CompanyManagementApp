@@ -6,7 +6,7 @@ import { EmployeeFilter } from 'src/app/_models/employeeFilter';
 import { EmployeeService } from 'src/app/_services/employee.service';
 import { AuthService } from 'src/app/_services/auth.service';
 import { ToastrService } from 'ngx-toastr';
-import { debounceTime, distinctUntilChanged, startWith, Subscription } from 'rxjs';
+import { debounceTime, distinctUntilChanged, retry, startWith, Subscription } from 'rxjs';
 import { Position } from 'src/app/_models/position';
 import { FormBuilder, FormControl } from '@angular/forms';
 
@@ -81,7 +81,8 @@ export class EmployeeListComponent implements OnInit, OnDestroy, AfterViewInit {
 
     this.subscriptionSearchBox$ = this.searchBoxForm.valueChanges.pipe(startWith(""),
       debounceTime(400),
-      distinctUntilChanged()
+      distinctUntilChanged(),
+      retry(3)
     ).subscribe((value: any) => {
       if (value) {
         const filter = { ...value, search: value.search.trim().toLowerCase() } as string;

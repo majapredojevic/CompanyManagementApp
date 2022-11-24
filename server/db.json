@@ -1,25 +1,6 @@
 {
   "employees": [
     {
-      "id": "IrnT6YR",
-      "firstName": "Ranko",
-      "lastName": "Rankoviii",
-      "position": "Tester",
-      "birthday": "2022-10-26T22:00:00.000Z",
-      "amount": 2323234,
-      "startDate": "2022-10-18T11:25:25.069Z",
-      "note": [
-        {
-          "date": "2022-10-25T05:44:11.974Z",
-          "description": "Ranko je novi tester."
-        },
-        {
-          "date": "2022-11-03T11:43:08.250Z",
-          "description": "Ranko je bio nemiran."
-        }
-      ]
-    },
-    {
       "id": "ixTZ6z1",
       "firstName": "Janko",
       "lastName": "Janković",
