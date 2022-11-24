@@ -1,0 +1,16 @@
+
+mat-card-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  vertical-align: text-bottom;
+  flex-wrap: wrap;
+}
+
+mat-form-field {
+  width: 48%;
+}
+
+i {
+  font-size: smaller;
+}

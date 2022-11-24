@@ -1,0 +1,75 @@
+<app-nav-bar></app-nav-bar>
+
+<mat-spinner *ngIf="!employee.id"></mat-spinner>
+
+<div *ngIf="employee.id" class="card">
+  <mat-card>
+
+    <mat-card-title>
+      Employee details
+      <button *ngIf="user.role === 'Admin'" mat-button class="transparentButton" [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu  #menu="matMenu">
+        <button mat-menu-item  class="transparentButton" [routerLink]="['/employees/edit/', employee.id]"
+        routerLinkActive="active"><mat-icon>edit</mat-icon> Edit
+      </button>
+        <button mat-menu-item  (click)="openDialog()" class="transparentButton" >  <mat-icon>delete</mat-icon>Delete</button>
+      </mat-menu>
+    </mat-card-title>
+
+<!-- Dialog for delete-->
+    <ng-template #dialogRef let-mydata>
+      <div class="dialogHeader"> <h2 mat-dialog-title>Delete employee</h2></div>
+      <mat-divider></mat-divider>
+      <div mat-dialog-content class="deleteEmployeeText">Would you like to delete this employee?</div>
+      <div mat-dialog-actions>
+        <button  mat-button mat-dialog-close class="dialogNoButton">No</button>
+        <button mat-button mat-dialog-close class="dialogYesButton"cdkFocusInitial  (click)="delete()">YES</button>
+      </div>
+    </ng-template>
+
+    <mat-card-content>
+
+      <mat-divider></mat-divider>
+      <p> <mat-icon>perm_identity</mat-icon> <b>First Name: </b> {{ employee.firstName }}</p>
+      <p> <mat-icon>person</mat-icon><b>Last Name: </b> {{ employee.lastName }}</p>
+      <p> <mat-icon>business</mat-icon><b>Job position: </b> {{ employee.position }}</p>
+      <p> <mat-icon>cake</mat-icon><b>Birthday: </b> {{ employee.birthday | date:'MMMM d, y'}}</p>
+      <p> <mat-icon>attach_money</mat-icon> <b>Amount: </b> {{ employee.amount }}</p>
+      <p> <mat-icon>calendar_today</mat-icon> <b>Start date: </b> {{ employee.startDate | date:'MMMM d, y' }} </p>
+
+      <div *ngIf="user.role === 'Admin'">
+      <mat-card-title>Notes
+        <button mat-button class="transparentButton" [routerLink]="['/employees/note/add', employee.id]" routerLinkActive="active" id="addNewButton">
+          <mat-icon>note_add</mat-icon>
+        </button>
+      </mat-card-title>
+
+      <mat-divider></mat-divider>
+
+      <mat-expansion-panel *ngIf="employee.note && employee.note.length" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title> <mat-icon>note</mat-icon> <b>Notes</b> </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p *ngFor="let note of employee.note">
+          <mat-icon class="dateIconInNotes">calendar_today</mat-icon> <i> {{note.date | date:'MMMM d, y' }} </i> <br />
+          {{note.description}}
+        </p>
+      </mat-expansion-panel>
+    </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button [routerLink]="['/employees']">
+        <mat-icon>arrow_back</mat-icon>Back to employee List
+      </button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>
+
+<!-- <pre>
+  prikaz jednog emplojija asink pajpetom
+  <pre>{{(asyncBla | async)?.firstName}}</pre>
+</pre> -->

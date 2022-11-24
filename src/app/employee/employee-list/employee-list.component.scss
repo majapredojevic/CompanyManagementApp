@@ -1,0 +1,58 @@
+.tableHeader {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 1vh auto;
+  justify-content: space-between;
+}
+
+mat-divider {
+  width: 50%;
+  margin: auto;
+}
+
+th {
+  margin-top: 5px;
+  background-color: rgb(9, 6, 38);
+  font-size: larger;
+  color: white
+}
+
+tr:hover {
+  background-color: rgb(209, 210, 224);
+}
+
+.mat-elevation-z8 {
+  margin: auto;
+  width: 50%;
+}
+
+table {
+  width: 100%;
+}
+
+mat-form-field {
+  margin-right: 12px;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.searchBox {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 1vh;
+}
+mat-form-field {
+  width: 50%;
+  margin: 15px;
+  margin-bottom: 0px;
+}
+

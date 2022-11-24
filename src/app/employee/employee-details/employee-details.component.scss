@@ -1,0 +1,62 @@
+
+h2 {
+  font-size:x-large;
+}
+
+.transparentButton {
+  padding: 0;
+  color: black;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  vertical-align: text-top;
+}
+
+.transparentButton mat-icon {
+ margin:10px;
+  color: black;
+}
+
+.dialogYesButton {
+  background-color:  rgb(251, 25, 25);
+  border: none;
+  padding: 0px;
+  margin:5px;
+}
+.dialogYesButton:hover {
+  border: 1px solid  rgb(251, 25, 25);
+  color:  rgb(251, 25, 25);
+}
+.dialogNoButton:hover {
+  border: 1px solid  black;
+}
+.dialogNoButton {
+  background-color:  rgb(192, 191, 200);
+  border: none;
+  padding: 0px;
+  margin:5px;
+  color:black;
+}
+
+.deleteEmployeeText {
+font-size: larger;
+}
+p {
+  padding: 5px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  font-size: medium;
+}
+
+i {
+  font-size:smaller;
+}
+
+.dateIconInNotes {
+  margin-right: 0px;
+  vertical-align: bottom;
+  transform: scale(0.7);
+}
+
+
+

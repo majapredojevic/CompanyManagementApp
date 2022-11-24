@@ -1,0 +1,7 @@
+<mat-toolbar>
+<span>Company management</span>
+<ul>
+  <li><button mat-button class="navBarButton" [routerLink]="['/employees/details/',currentUser.employeeId]" ><mat-icon>person_outline</mat-icon> </button></li>
+  <li><button mat-button class="navBarButton" (click)="logout()"><mat-icon>exit_to_app</mat-icon>Logout</button></li>
+</ul>
+</mat-toolbar>

@@ -1,0 +1,67 @@
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./../../../images/What-is-Management.jpg');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+
+.loginCard {
+  width:20%;
+  display: block;
+  justify-content: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+mat-card-content,
+mat-card-header,
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+
+
+mat-form-field {
+  display: block;
+  width: 250px;
+  height: 150px;
+}
+
+mat-card-header {
+  font-size: 40px;
+  color: rgb(9, 6, 38);
+  letter-spacing: 8px;
+  font-weight: bold;
+  padding: 40px;
+  margin-bottom: 30px;
+}
+
+.loginButton {
+  margin: 30px;
+  background-color: rgb(9, 6, 38);
+  color: whitesmoke;
+  font-size: 20px;
+  padding: 5px 40px;
+  border:none;
+}
+.loginButton:hover {
+  border:1px solid  rgb(9, 6, 38);
+
+}
+.loginButton:disabled {
+  background-color: darkgray;
+  border: none;
+}
+
+
+
+
+

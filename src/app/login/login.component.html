@@ -1,0 +1,25 @@
+<div class="loginPage">
+
+  <mat-toolbar>
+    <span>Company Management</span>
+      <ul>
+        <li> <button mat-button class="navBarButton" (click)="setLink('/login_employee')">Login</button></li>
+        <li><button mat-button class="navBarButton" (click)="setLink('/login_admin')">Login as Admin</button></li>
+      </ul>
+  </mat-toolbar>
+
+  <div *ngIf="link != ''" class="formContainer">
+    <mat-card class="loginCard">
+      <mat-card-content>
+        <mat-card-header class="login">LOGIN</mat-card-header>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <mat-form-field autofocus appearance="outline" >
+            <mat-label>Username</mat-label>
+            <input #usernameInput (keyup)="$event.keyCode == 13 ? onSubmit() : ''" matInput formControlName="username" placeholder="Username">
+          </mat-form-field>
+          <button class="loginButton" mat-button [disabled]="!loginForm.valid">Login</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,165 @@
+{
+  "employees": [
+    {
+      "id": "IrnT6YR",
+      "firstName": "Ranko",
+      "lastName": "Rankoviii",
+      "position": "Tester",
+      "birthday": "2022-10-26T22:00:00.000Z",
+      "amount": 2323234,
+      "startDate": "2022-10-18T11:25:25.069Z",
+      "note": [
+        {
+          "date": "2022-10-25T05:44:11.974Z",
+          "description": "Ranko je novi tester."
+        },
+        {
+          "date": "2022-11-03T11:43:08.250Z",
+          "description": "Ranko je bio nemiran."
+        }
+      ]
+    },
+    {
+      "id": "ixTZ6z1",
+      "firstName": "Janko",
+      "lastName": "Janković",
+      "position": "Tester",
+      "birthday": "2022-10-13T22:00:00.000Z",
+      "amount": 6789,
+      "startDate": "2022-10-18T11:26:26.447Z",
+      "note": [
+        {
+          "date": "2022-10-20T13:56:24.228Z",
+          "description": "Janko je danas bio jako vrijedan, uradio je svoj zadatak prije vremena."
+        },
+        {
+          "date": "2022-10-20T14:41:14.029Z",
+          "description": "Janko je danas napravio grešku."
+        }
+      ]
+    },
+    {
+      "id": "vsGzlB2",
+      "firstName": "Adem",
+      "lastName": "Ademović",
+      "position": "Developer",
+      "birthday": "2022-10-12T22:00:00.000Z",
+      "amount": 123,
+      "startDate": "2022-10-19T12:07:03.839Z",
+      "note": [
+        {
+          "date": "2022-10-20T13:56:54.530Z",
+          "description": "Prvi note o Ademu."
+        },
+        {
+          "date": "2022-10-20T14:40:34.476Z",
+          "description": "Drugi note o Ademu."
+        }
+      ]
+    },
+    {
+      "id": "gdRZFzM",
+      "firstName": "Mirko",
+      "lastName": "Mirkovic",
+      "position": "Developer",
+      "birthday": "2022-10-14T22:00:00.000Z",
+      "amount": 123,
+      "startDate": "2022-10-19T13:25:27.430Z",
+      "note": []
+    },
+    {
+      "id": "Kxlfw1j",
+      "firstName": "Miloš",
+      "lastName": "Marković",
+      "position": "Developer",
+      "birthday": "2022-10-14T22:00:00.000Z",
+      "amount": 123,
+      "startDate": "2022-10-19T13:25:27.430Z",
+      "note": []
+    },
+    {
+      "id": "jVkGqBc",
+      "firstName": "Bojan",
+      "lastName": "Ranković",
+      "position": "Tester",
+      "birthday": "2022-10-27T22:00:00.000Z",
+      "amount": 123000,
+      "startDate": "2022-10-19T13:39:16.005Z",
+      "note": []
+    },
+    {
+      "id": "uGKhq9c",
+      "firstName": "Ana",
+      "lastName": "Perić",
+      "position": "Developer",
+      "birthday": "2022-10-19T22:00:00.000Z",
+      "amount": 11111111111,
+      "startDate": "2022-10-19T13:40:21.778Z",
+      "note": []
+    },
+    {
+      "id": "vDzwuuf",
+      "firstName": "Pero",
+      "lastName": "Perić",
+      "position": "Developer",
+      "birthday": "2022-10-14T22:00:00.000Z",
+      "amount": 234123,
+      "startDate": "2022-10-19T13:45:14.467Z",
+      "note": []
+    },
+    {
+      "id": "bHw9h6a",
+      "firstName": "Zdravko",
+      "lastName": "Zdravković",
+      "position": "Developer",
+      "birthday": "2022-10-20T22:00:00.000Z",
+      "amount": 11111111111,
+      "startDate": "2022-10-19T14:02:19.643Z",
+      "note": []
+    },
+    {
+      "id": "HecAatA",
+      "firstName": "Dragana",
+      "lastName": "Draganović",
+      "position": "Software engineer",
+      "birthday": "1994-02-08T23:00:00.000Z",
+      "amount": 123345,
+      "startDate": "2022-10-25T05:44:59.521Z",
+      "note": [
+        {
+          "date": "2022-10-25T05:46:35.734Z",
+          "description": "Prvi note o Dragani."
+        }
+      ]
+    },
+    {
+      "id": "Vxu2DZG",
+      "firstName": "Bojana",
+      "lastName": "Marković",
+      "position": "CEO",
+      "birthday": "2022-10-20T22:00:00.000Z",
+      "amount": 123456,
+      "startDate": "2022-10-26T10:26:31.763Z",
+      "note": [
+        {
+          "date": "2022-10-26T10:28:02.013Z",
+          "description": "Duguje 25KM."
+        }
+      ]
+    }
+  ],
+  "login_admin": {
+    "user": {
+      "name": "Admin Name",
+      "employeeId": "vsGzlB2",
+      "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyU3RhdHVzIjoiQWN0aXZlIiwicm9sZSI6IkFkbWluIiwic3ViIjoiYmxhQGludmVuaXQuaW8iLCJqdGkiOiJjY2VlODFlNC02ZmU5LTRmYjAtOTk4NS0wNWJiZDdjOGQ3NGQiLCJMYW5ndWFnZUlkIjoiMSIsIlVzZXJOYW1lIjoiQWRtaW4gQWRtaW5vdmljIiwiZXhwIjoxNjcxNjkxNjE1LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.U3zthB-tHN3Hq8qfpSSj-mHOLu7sHgOdr9YIYRr4Suw"
+    }
+  },
+  "login_employee": {
+    "user": {
+      "name": "Zaposlenik Name",
+      "employeeId": "ixTZ6z1",
+      "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyU3RhdHVzIjoiQWN0aXZlIiwicm9sZSI6IkVtcGxveWVlIiwic3ViIjoiYmxhMUBpbnZlbml0LmlvIiwianRpIjoiY2NlZTgxZTQtNmZlOS00ZmIwLTk5ODUtMDViYmQ3YzhkNzRkIiwiTGFuZ3VhZ2VJZCI6IjEiLCJVc2VyTmFtZSI6IlBjZWxpY2EgTWFqYSIsImV4cCI6MTY3MTY5MTYxNSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoibG9jYWxob3N0In0.m4LtCpvNd5twSRkEvPOFmrFSyJlotXTxx8mQSR5jwUQ"
+    }
+  }
+}
