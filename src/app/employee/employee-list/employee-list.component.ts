@@ -26,8 +26,8 @@ export class EmployeeListComponent implements OnInit, OnDestroy, AfterViewInit {
   searchBoxForm: any;
 
 
-  defaultValue = "All";
-  positions: string[] = [this.defaultValue].concat(Object.values(Position));
+  defaultFilterValue = "All";
+  positions: string[] = [this.defaultFilterValue].concat(Object.values(Position));
 
   dataSource = new MatTableDataSource<Employee>();
 
@@ -55,13 +55,13 @@ export class EmployeeListComponent implements OnInit, OnDestroy, AfterViewInit {
 
     this.searchBoxForm = this.fb.group({
       search: new FormControl(''),
-      selectedFilterOption: new FormControl('All')
+      selectedFilterOption: new FormControl(this.defaultFilterValue)
     });
 
     this.dataSource.filterPredicate = ((data, filter) => {
-      const a = filter.selectedFilterOption === 'All' || data.position === filter.selectedFilterOption;
-      const b = !filter.search || data.firstName.toLowerCase().includes(filter.search) || data.lastName.toLowerCase().includes(filter.search);
-      return a && b;
+      const filterMatching = filter.selectedFilterOption === this.defaultFilterValue || data.position === filter.selectedFilterOption;
+      const nameMatching = !filter.search || data.firstName.toLowerCase().includes(filter.search) || data.lastName.toLowerCase().includes(filter.search);
+      return filterMatching && nameMatching;
     }) as (Employee: any, string: any) => boolean;
   }
 
@@ -77,7 +77,7 @@ export class EmployeeListComponent implements OnInit, OnDestroy, AfterViewInit {
       }
     });
 
-    this.empFilters.push({ name: 'position', options: this.positions, defaultValue: this.defaultValue });
+    this.empFilters.push({ name: 'position', options: this.positions, defaultValue: this.defaultFilterValue });
 
     this.subscriptionSearchBox$ = this.searchBoxForm.valueChanges.pipe(startWith(""),
       debounceTime(400),
